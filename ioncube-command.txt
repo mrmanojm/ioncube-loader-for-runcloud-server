@@ -1,0 +1,7 @@
+cd
+wget https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
+tar -zxvf ioncube_loaders_lin_x86-64.tar.gz
+
+cp ioncube/ioncube_loader_lin_7.4.so /RunCloud/Packages/php74rc/lib/php/extensions/no-debug-non-zts-20190902/
+echo "zend_extension=ioncube_loader_lin_7.4.so" > /etc/php74rc/conf.d/ioncube.ini
+systemctl restart php74rc-fpm
